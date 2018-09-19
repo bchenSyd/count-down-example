@@ -24,7 +24,7 @@ class Event extends Component {
   componentWillReceiveProps(nextProps) {
     const {
       event: { AdvertisedStartTime: startTime }
-    } = this.props;
+    } = nextProps;
 
     this.setState({
       diffInSeconds: this.diffTime(startTime)
