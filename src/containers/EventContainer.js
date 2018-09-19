@@ -28,14 +28,19 @@ class EventContainer extends Component {
     fetchEvents();
     setInterval(fetchEvents, 5000);
   }
-
+  w;
   render() {
     const { events } = this.state;
     return (
-      <div className="App">
-        {events.map(e => (
-          <Event key={`event-${e.EventID}`} event={e} />
-        ))}
+      <div className="next2Jump">
+        <div>
+          <label>Next to Jump</label>
+        </div>
+        <div className="events">
+          {events.map(e => (
+            <Event key={`event-${e.EventID}`} event={e} />
+          ))}
+        </div>
       </div>
     );
   }
