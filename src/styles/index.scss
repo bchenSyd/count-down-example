@@ -40,8 +40,8 @@ html {
 }
 
 .next2Jump {
+  padding: 4px;
   width: 60%;
-  height: 220px;
   background-color: $secondary;
   label {
     color: white;
@@ -49,6 +49,7 @@ html {
   .events {
     display: flex;
     justify-content: start;
+    flex-wrap: wrap;
   }
   @import "./pages/Event.scss";
 }
