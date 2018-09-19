@@ -2,8 +2,10 @@ import React, { Component } from "react";
 
 class Event extends Component {
   state = {
-    diffInSeconds: NaN
+    diffInSeconds: 0
   };
+
+  interval = undefined;
 
   diffTime = eventStartTimeUTC => {
     const now_iso = new Date().toISOString();
@@ -33,12 +35,18 @@ class Event extends Component {
 
   componentDidMount() {
     const self = this;
-    setInterval(() => {
+    this.interval = setInterval(() => {
       const { diffInSeconds } = self.state;
       self.setState({
         diffInSeconds: diffInSeconds - 1
       });
     }, 1000);
+  }
+
+  componentWillUnmount() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   }
 
   formatTime = timeDiffInSeconds => {
