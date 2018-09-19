@@ -8,6 +8,7 @@ class EventContainer extends Component {
     events: []
   };
 
+  interval = undefined;
   componentDidMount() {
     const self = this;
     const fetchEvents = () =>
@@ -26,9 +27,15 @@ class EventContainer extends Component {
         });
 
     fetchEvents();
-    setInterval(fetchEvents, 5000);
+    this.interval = setInterval(fetchEvents, 5000);
   }
-  w;
+  
+  componentWillUnmount() {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+  }
+
   render() {
     const { events } = this.state;
     return (
