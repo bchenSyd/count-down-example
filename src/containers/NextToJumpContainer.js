@@ -18,14 +18,12 @@ class NextToJumpContainer extends Component {
           if (!success) {
             throw "fetch failed";
           }
-          console.log("**********************  fetch events");
-
           self.setState({
             events: [...result]
           });
         })
         .catch(err => {
-          console.warn("needs to direct to error page");
+          console.warn("needs to direct to error page", err);
         });
 
     fetchEvents();

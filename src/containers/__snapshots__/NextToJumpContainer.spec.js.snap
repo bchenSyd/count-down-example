@@ -1,16 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`next to jump should render correctly 1`] = `
-<div
-  className="next2Jump"
->
-  <div>
-    <label>
-      Next to Jump
-    </label>
-  </div>
+<NextToJumpContainer>
   <div
-    className="events"
-  />
-</div>
+    className="next2Jump"
+  >
+    <div>
+      <label>
+        Next to Jump
+      </label>
+    </div>
+    <div
+      className="events"
+    >
+      <event
+        event={
+          Object {
+            "AdvertisedStartTime": "2018-09-20T00:22:09.753Z",
+            "EventID": 30717084,
+            "EventName": "Race 3",
+            "EventTypeDesc": "Greyhounds",
+            "MasterEventName": "Races",
+            "Venue": Object {
+              "Slug": "daytona-beach",
+              "StateCode": null,
+              "Venue": "Daytona Beach",
+            },
+          }
+        }
+        key="event-30717084"
+      />
+    </div>
+  </div>
+</NextToJumpContainer>
 `;
