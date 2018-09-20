@@ -7,7 +7,7 @@ exports[`Event should render a event tile properly 1`] = `
   <div
     className="count-down"
   >
-    1m 1s 
+    1m 1s
   </div>
   <div>
     <div
@@ -29,7 +29,7 @@ exports[`Event should render a event tile properly 2`] = `
   <div
     className="count-down"
   >
-    1m  
+    1m 
   </div>
   <div>
     <div
