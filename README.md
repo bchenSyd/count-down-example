@@ -1,6 +1,7 @@
 # note
+> this project has been deployed to heroku, see: https://bo-beteasy.herokuapp.com/
 
-data fetched from [beteasy](https://beteasy.com.au/api/home/next-jumps/1,2,3) every 5 seconds. the UI is roughly in sync with https://beteasy.com.au/  "next to jump" section
+data fetched from [beteasy](https://beteasy.com.au/api/home/next-jumps/1,2,3) every 5 seconds. UI is roughly in sync with https://beteasy.com.au/  "next to jump" section
 
 # how to run locally 
 
