@@ -3,7 +3,7 @@ import fetch from "../common/fetch";
 import Event from "../components/Event";
 import { basePath } from "../config";
 
-class EventContainer extends Component {
+class NextToJumpContainer extends Component {
   state = {
     events: []
   };
@@ -53,4 +53,4 @@ class EventContainer extends Component {
   }
 }
 
-export default EventContainer;
+export default NextToJumpContainer;

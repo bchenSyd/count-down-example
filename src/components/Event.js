@@ -74,7 +74,7 @@ class Event extends Component {
     } = event;
 
     return (
-      <div className="Event">
+      <div className="event">
         <div className="count-down">{this.formatTime(diffInSeconds)}</div>
         <div>
           <div className="event-name">{EventName}</div>

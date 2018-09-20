@@ -39,17 +39,4 @@ html {
   justify-content: center;
 }
 
-.next2Jump {
-  padding: 4px;
-  width: 60%;
-  background-color: $secondary;
-  label {
-    color: white;
-  }
-  .events {
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-  }
-  @import "./pages/Event.scss";
-}
+@import './pages/next2jump.scss'

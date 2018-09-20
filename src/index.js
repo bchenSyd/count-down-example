@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
-import EventContainer from "./containers/EventContainer";
+import NextToJumpContainer from "./containers/NextToJumpContainer";
 import registerServiceWorker from "./registerServiceWorker";
 
 const App = () => (
@@ -10,7 +10,7 @@ const App = () => (
       <h2>bet easy</h2>
     </header>
     <div className="App-content">
-      <EventContainer />
+      <NextToJumpContainer />
     </div>
     <footer className="App-header-footer">
       <div>bochen2014@yahoo.com</div>
