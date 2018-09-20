@@ -1,5 +1,5 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import {shallow} from "enzyme";
 import NextToJumpContainer from "./NextToJumpContainer";
 
 jest.mock("../components/Event", () => "Event");
@@ -41,7 +41,7 @@ const response2 = {
 describe("next to jump", () => {
   it("should render correctly", () => {
     fetch = jest.fn().mockReturnValueOnce(Promise.resolve(response1));
-    const component = renderer.create(<NextToJumpContainer />);
-    expect(component.toJSON()).toMatchSnapshot();
+    const component = shallow(<NextToJumpContainer />);
+    expect(component).toMatchSnapshot();
   });
 });
