@@ -3,6 +3,7 @@ import fetch from "../common/fetch";
 import Event from "../components/Event";
 import { basePath } from "../config";
 
+
 class NextToJumpContainer extends Component {
   state = {
     events: []
