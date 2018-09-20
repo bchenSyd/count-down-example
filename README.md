@@ -7,5 +7,9 @@ data fetched from [beteasy](https://beteasy.com.au/api/home/next-jumps/1,2,3) ev
 `npm i` or `yarn install` then `npm start`
 
 # unit test
-`npm test`
+`npm test` 
+
+unit test is the only sophisticated part in this project. I've tested the case where 
+1. component did a `fetch` inside `componentDidMount`, should render with mocked fetch result;
+2. component has a timer to repaint UI every second. Use jest fake timer to test it. 
 
