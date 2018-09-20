@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`next to jump should render correctly 1`] = `
+<div
+  className="next2Jump"
+>
+  <div>
+    <label>
+      Next to Jump
+    </label>
+  </div>
+  <div
+    className="events"
+  />
+</div>
+`;

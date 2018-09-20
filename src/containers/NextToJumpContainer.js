@@ -18,6 +18,8 @@ class NextToJumpContainer extends Component {
           if (!success) {
             throw "fetch failed";
           }
+          console.log("**********************  fetch events");
+
           self.setState({
             events: [...result]
           });
@@ -29,7 +31,7 @@ class NextToJumpContainer extends Component {
     fetchEvents();
     this.interval = setInterval(fetchEvents, 5000);
   }
-  
+
   componentWillUnmount() {
     if (this.interval) {
       clearInterval(this.interval);
