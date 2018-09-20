@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { diffTimeInSeconds, displayTimeDiff } from "../common/timeUtils";
+
 
 class Event extends Component {
   state = {
@@ -7,19 +9,12 @@ class Event extends Component {
 
   interval = undefined;
 
-  diffTime = eventStartTimeUTC => {
-    const now_iso = new Date().toISOString();
-    const diff =
-      new Date(eventStartTimeUTC).getTime() - new Date(now_iso).getTime();
-    return parseInt(diff / 1000);
-  };
-
   componentWillMount() {
     const {
       event: { AdvertisedStartTime: startTime }
     } = this.props;
     this.setState({
-      diffInSeconds: this.diffTime(startTime)
+      diffInSeconds: diffTimeInSeconds(startTime)
     });
   }
 
@@ -29,7 +24,7 @@ class Event extends Component {
     } = nextProps;
 
     this.setState({
-      diffInSeconds: this.diffTime(startTime)
+      diffInSeconds: diffTimeInSeconds(startTime)
     });
   }
 
@@ -49,33 +44,17 @@ class Event extends Component {
     }
   }
 
-  formatTime = timeDiffInSeconds => {
-    let minutes = 0,
-      seconds;
-    const _secondsABS = Math.abs(timeDiffInSeconds);
-    if (_secondsABS >= 60) {
-      minutes = parseInt(_secondsABS / 60);
-      seconds = _secondsABS % 60;
-    } else {
-      seconds = _secondsABS;
-    }
-    return `${timeDiffInSeconds < 0 ? "-" : ""}${
-      minutes ? minutes + "m" : ""
-    } ${seconds}s `;
-  };
-
   render() {
     const { event } = this.props;
     const { diffInSeconds } = this.state;
     const {
       EventName,
-      Venue: { Venue },
-      AdvertisedStartTime
+      Venue: { Venue }
     } = event;
 
     return (
       <div className="event">
-        <div className="count-down">{this.formatTime(diffInSeconds)}</div>
+        <div className="count-down">{displayTimeDiff(diffInSeconds)}</div>
         <div>
           <div className="event-name">{EventName}</div>
           <div>{Venue}</div>

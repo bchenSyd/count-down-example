@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Event should render a event tile properly 1`] = `
+<div
+  className="event"
+>
+  <div
+    className="count-down"
+  >
+    1m 1s 
+  </div>
+  <div>
+    <div
+      className="event-name"
+    >
+      Race 3
+    </div>
+    <div>
+      Daytona Beach
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Event should render a event tile properly 2`] = `
+<div
+  className="event"
+>
+  <div
+    className="count-down"
+  >
+    1m  
+  </div>
+  <div>
+    <div
+      className="event-name"
+    >
+      Race 3
+    </div>
+    <div>
+      Daytona Beach
+    </div>
+  </div>
+</div>
+`;
